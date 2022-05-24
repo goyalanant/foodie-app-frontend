@@ -1,0 +1,64 @@
+<header>
+    <div class="container-fluid my-container">
+        <div class="row h-25 justify-content-between align-items-center my-row">
+            <div class="col-md-2 offset-1 col-sm-6 my-col">
+                <li><a href="/Aboutus">About Us</a></li>
+               
+                <!-- <li><button (click)="profileDialogBox()" class="nav_links" style="color: azure;"> Profile</button></li> -->
+            </div>
+            <div class="col-lg-5  col-md-8  col-sm-12 my-col">
+                <ul class="nav_links">
+                    <li><a routerLink="/add-restaurant">add Restaurants</a></li>
+                    <li *ngIf="!isLoggedIn() else elseBlock" ><button (click)="logindialogBox()">Login</button></li>
+                    <li *ngIf="!isLoggedIn()"><button (click)="signupDialogBox()">SignUp</button></li>
+                    <ng-template #elseBlock>
+                      
+                        <!-- <li class="nav_links" style="color: azure;" > {{userName}}</li> -->
+                        <div class="dropdown">
+                            <button class="dropbtn">{{userName}}</button>
+                            <div class="dropdown-content">
+                              <a (click)="profileDialogBox()">Profile</a>
+                              <a href="/favourite">Favourite</a>
+                              <a (click)="logout()" href="">Logout</a>
+                            </div>
+                          </div>
+                        
+                          <button mat-icon-button >
+                            <mat-icon routerLink="/cart" style="color: azure;"  matBadgeColor="warn"  > add_shopping_cart</mat-icon>
+                        </button>
+                    </ng-template>
+                </ul> 
+            </div>
+        </div>
+        <div class="row h-25 justify-content-center align-items-end my-row">
+            
+            <div class="col-4 my-col">
+                <h4>Foozie</h4>
+            </div>
+        </div>
+
+        <div class="row h-25 justify-content-center align-items-center my-row">
+            
+            <div class="col-lg-6 col-md-10 col-sm-12  my-col">
+                <h6>Discover the best food and drinks</h6>
+            </div>
+        </div>
+        <div class="row h-25 justify-content-center align-items-start gx-0 my-row">
+
+          
+            <div class="col-12 offset-6 my-col">
+                <!-- <input class = "search-bar" type="text" placeholder="search for restaurant" /> -->
+            
+                    <input class = "search-bar" type="text" placeholder="Search the Item" matInput [matAutocomplete]="auto" [formControl]="myControl"/>
+                    <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+                        <mat-option (click)="func(option)" *ngFor="let option of filteredOptions | async" [value]="option">
+                             {{option}} 
+                        </mat-option>
+                    </mat-autocomplete>
+              
+            </div>
+        </div>
+    </div>
+</header>
+
+

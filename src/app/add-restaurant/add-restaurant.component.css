@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Neonderthaw&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Neonderthaw&family=Satisfy&display=swap');
+
+
+ h4{
+    font-family: "Satisfy",sans-serif;
+    font-weight: 600;
+    font-size: 90px;
+    margin-right: auto;
+    padding-left: 26%;
+    padding-bottom: 10%;
+    color: #edf0f1;
+} 
+sub{
+
+    font-family: "Satisfy",sans-serif;
+    font-weight: 600;
+    font-size: 25px;
+    margin-right: auto;
+    color: #edf0f1;
+
+}
+h6{
+
+    font-family: "Satisfy";
+    font-weight: 600;
+    font-size: 50px;
+    padding-left: 6%;
+    padding-bottom: 70px;
+    margin-right: auto;
+    color: #edf0f1;
+
+} 
+ a,button{
+
+    font-family: "Montserrat",sans-serif;
+    font-weight: 600;
+    font-size: 17px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+li :hover{
+    color: black;
+} 
+
+header {
+    display: flex;
+    height: 60%;
+    background-image: url('https://b.zmtcdn.com/web_assets/81f3ff974d82520780078ba1cfbd453a1583259680.png');
+    justify-content: flex-start;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+} 
+
+
+ .nav_links{
+    list-style: none;
+}
+.nav_links li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+.nav_links li a:hover{
+    columns: #0088a9;
+} 
+
+button{
+    border: none;
+    background-color: transparent;
+    padding: 0px 20px;
+    cursor: pointer;
+}
+button:hover{
+    color: black;
+} 
+
+.search-bar{
+
+    width: 100%;
+    height: 45px;
+    font-size: 25px;
+    font-weight: 400;
+    /* border: 2px dotted rgb(238, 68, 68); */
+    padding-left: 15px;
+    border-radius: 0px 20px 20px 0px;
+    font-family: "Satisfy",sans-serif;  
+}
+
+.location-bar{
+
+    width: 100%;
+    height: 45px;
+    font-size: 25px;
+    font-weight: 400;
+    
+    /* border: 2px dotted rgb(238, 68, 68); */
+    padding-left: 15px;
+    border-radius: 20px 0px 0px 20px;
+    font-family: "Satisfy",sans-serif;  
+}
+
+/* .example-spacer {
+    flex: 1 1 auto;
+  } */
+  .fill-remaining-space {
+   
+    flex: 1 1 auto;
+    
+  }
+
+
+ .longtabs{
+    max-width: 100%;
+
+  
+}
+
+/* .example-container .mat-form-field + .mat-form-field {
+  margin-left: 8px;
+} */
+
+/* .form{
+  width: 50%;
+} */
+.grid {
+  box-sizing: border-box;
+}
+
+.address {
+  width: 50%;
+  float: left;
+  padding: 15px;   
+}
+.address1 {
+  width: 50%;
+  float: center;
+  padding: 15px;   
+}
+.example-additional-selection {
+  opacity: 0.75;
+  font-size: 0.75em;
+}
+
+.image{
+  background-image: "assets/Upload.png";
+}
+.html{
+  width: 100%;
+  height: 100%;
+ 
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Neonderthaw&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Neonderthaw&family=Satisfy&display=swap');
+
+
+ h4{
+    font-family: "Satisfy",sans-serif;
+    font-weight: 600;
+    font-size: 90px;
+    margin-right: auto;
+    padding-left: 26%;
+    padding-bottom: 10%;
+    color: #edf0f1;
+} 
+sub{
+
+    font-family: "Satisfy",sans-serif;
+    font-weight: 600;
+    font-size: 25px;
+    margin-right: auto;
+    color: #edf0f1;
+
+}
+h6{
+
+    font-family: "Satisfy";
+    font-weight: 600;
+    font-size: 50px;
+    padding-left: 6%;
+    padding-bottom: 70px;
+    margin-right: auto;
+    color: #edf0f1;
+
+} 
+ a,button{
+
+    font-family: "Montserrat",sans-serif;
+    font-weight: 600;
+    font-size: 17px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+li :hover{
+    color: black;
+} 
+
+header {
+    display: flex;
+    height: 60%;
+    background-image: url('https://b.zmtcdn.com/web_assets/81f3ff974d82520780078ba1cfbd453a1583259680.png');
+    justify-content: flex-start;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+} 
+
+
+ .nav_links{
+    list-style: none;
+}
+.nav_links li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+.nav_links li a:hover{
+    columns: #0088a9;
+} 
+
+button{
+    border: none;
+    background-color: transparent;
+    padding: 0px 20px;
+    cursor: pointer;
+}
+button:hover{
+    color: black;
+} 
+
+.search-bar{
+
+    width: 100%;
+    height: 45px;
+    font-size: 25px;
+    font-weight: 400;
+    /* border: 2px dotted rgb(238, 68, 68); */
+    padding-left: 15px;
+    border-radius: 0px 20px 20px 0px;
+    font-family: "Satisfy",sans-serif;  
+}
+
+.location-bar{
+
+    width: 100%;
+    height: 45px;
+    font-size: 25px;
+    font-weight: 400;
+    
+    /* border: 2px dotted rgb(238, 68, 68); */
+    padding-left: 15px;
+    border-radius: 20px 0px 0px 20px;
+    font-family: "Satisfy",sans-serif;  
+}
+
+

@@ -1,0 +1,36 @@
+<div class="bootstrap-wrapper">
+    <div class="container mt">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h1 class="text-center">SignUp</h1>
+
+                <form (ngSubmit)="onSubmit()">
+
+                    <mat-form-field  appearance="outline">
+                        <mat-label>Username</mat-label>
+                        <input type="text"  name="userName" required  [(ngModel)] = 'credentials.userName'  matInput/>
+                    </mat-form-field>
+
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Email</mat-label>
+                        <input class = "email" name="email" required  type="email" [(ngModel)] = 'credentials.email'  matInput/>
+                    </mat-form-field>
+                    
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Password</mat-label>
+                        <input  name="password" required class = "input-field" type="password" [(ngModel)] = "credentials.password"
+                        matInput />
+
+                    </mat-form-field>
+
+                    <div class="container text-center">
+                        <br><button type="submit" mat-raised-button >SignUp</button>
+                    </div>
+                </form>
+                
+              
+          
+            </div>
+        </div>
+    </div>
+</div>

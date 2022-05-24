@@ -1,0 +1,43 @@
+<app-navbar></app-navbar>
+
+
+
+<div class="album py-5 bg-light">
+    <div class="container">
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        
+        <div class="col" *ngFor="let restaurant of restaurantList">
+          <div class="card shadow restaurant-card">
+            <a><img class="bd-placeholder-img card-img-top" (click)="image(restaurant.restaurantId)" width="100%" height="225" src={{restaurant.restaurantImages}}  preserveAspectRatio="xMidYMid slice" focusable="false" ></a>
+            
+              
+              <div class="row gx-1 my-row" >
+                <div class="col-lg-9 col-md-6 my-col">
+                  <h3 class="card-text r-name">{{restaurant.restaurantName}}</h3>
+      
+      
+                  
+                  
+                </div>
+                <div class="col-lg-3 col-md-4 flex-end align-items-end my-col">
+                  <button style="background-color: black;color: azure;" (click)="remove(restaurant.restaurantId)">remove</button>
+                </div>
+                <!-- <div class="col-lg-3 col-md-4 flex-end align-items-end my-col">
+                    <mat-icon>favorite</mat-icon>
+                </div> -->
+              </div>
+      
+              <!-- <div class="row gx-1  my-row">
+                <div class="col-12 justify-content-start  my-col" >
+                  <ul class="cuisine-list">
+                    <li *ngFor="let cuisine of restaurant.cuisineIds">{{cuisine}}</li>
+                  </ul>
+                </div>
+      
+              </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

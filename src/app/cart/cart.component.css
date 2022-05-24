@@ -1,0 +1,9 @@
+.example-spacer {
+    flex: 1 1 auto;
+    font-size: x-large;
+  }
+  .btn{
+    font-size: larger;
+    background-color: green;
+    color:black;
+  }

@@ -1,0 +1,61 @@
+<app-header></app-header>
+<main>
+
+  <section class="py-2 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light quote">Nothing brings people together like good food</h1>
+        <p class="lead text-muted mario">"Although the skils aren't hard to learn, finding the happiness and finding the satisfaction and finding fulfillment in continously serving somebody else something good to eat, is what makes a really good restaurant. --Mario Batali"</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="album py-5 bg-light">
+    <div class="container">
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        
+        <div class="col" *ngFor="let restaurant of restaurants">
+          <div class="card shadow restaurant-card">
+            <a (click)="image(restaurant.restaurantId)"><img class="bd-placeholder-img card-img-top" width="100%" height="225" src={{restaurant.restaurantImages[0]}}  preserveAspectRatio="xMidYMid slice" focusable="false" ></a>
+            
+              
+              <div class="row gx-1 my-row" >
+                <div class="col-lg-9 col-md-6 my-col">
+                  <h3 class="card-text r-name">{{restaurant.restaurantName}}</h3>
+      
+      
+                  
+                  
+                </div>
+                <!-- <div class="col-lg-3 col-md-4 flex-end align-items-end my-col">
+                    <mat-icon>favorite</mat-icon>
+                </div> -->
+              </div>
+      
+              <div class="row gx-1  my-row">
+                <div class="col-12 justify-content-start  my-col" >
+                  <ul class="cuisine-list">
+                    <li *ngFor="let cuisine of restaurant.cuisineIds">{{cuisine}}</li>
+                  </ul>
+                </div>
+      
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<!-- <footer class="text-muted py-5">
+  <div class="container">
+    <p class="float-end mb-1">
+      <a href="#">Back to top</a>
+    </p>
+    <p class="mb-1">Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
+    <p class="mb-0">New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a href="../getting-started/introduction/">getting started guide</a>.</p>
+  </div>
+</footer> -->
+<app-footer></app-footer>

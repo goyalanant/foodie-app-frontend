@@ -1,0 +1,51 @@
+
+<!-- <mat-toolbar style="color: rgb(241, 241, 228); background-color: rgb(34, 32, 32);position:sticky;top: 0%;z-index: 99999;" >
+  
+  &nbsp;&nbsp;
+  <span>Foodie</span>
+  <button mat-button><h2>About Us</h2></button>
+  <span class="example-spacer"></span>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon >home</mat-icon></button>
+  <a routerLink="/favourite"><button mat-icon-button class="example-icon favorite-icon"  aria-label="Example icon-button with heart icon">
+    <mat-icon>favorite</mat-icon>
+  </button></a> 
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+    <mat-icon>share</mat-icon>
+  </button>&nbsp;&nbsp;
+  
+</mat-toolbar> -->
+
+<app-navbar></app-navbar>
+
+
+<div class="card mb-3 ; container " style="max-width: 540px;align-self: auto; padding-top: 2%;">
+    <div class="row g-0" *ngFor="let cart of cartItem">
+      <div class="col-md-4">
+        <img src="{{cart.dish.dishImages[0]}}" class="img-fluid rounded-start" >
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h1 class="card-title mt-2"  >{{cart.dish.dishName}}</h1>
+          <!-- <h5 class="card-text">Amount    -  {{cart.dish.dishPrice}} </h5> -->
+          <h3 class="card-text"> Quantity    -  {{cart.dishQuantity}} </h3>
+          <h4 class="card-text"> Amount     -    {{(cart.dish.dishPrice[0])*(cart.dishQuantity)}}</h4>
+          <form >
+            <!-- <label for="quantity">Quantity    :     </label>
+            &nbsp;&nbsp;<input type="number" id={{dish.dishId}} name="quantity" value="1" min="1" max="5">
+            &nbsp;&nbsp;<button type="button" class="btn btn-block btn-light global--btn-size" (click)="addToCart(dish.dishId)">
+                ADD TO CART
+              <i class="fa fa-shopping-cart ml-1 icon-custom-color" aria-hidden="true" routerLink="/cart"></i>
+            </button> -->
+          </form>
+        </div>
+      </div>
+    </div>
+    <h1 style="padding-top: 10%;" >Total Amount Of Cart  --  {{totalAmount}}</h1>
+    <br>
+    <button class="btn" (click)="sweet()">Order Now</button>
+    <br>
+    
+  </div>
+
+  

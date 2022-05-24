@@ -1,0 +1,103 @@
+
+<!-- <nav class="navbar navbar-dark bg-dark">
+    <div>
+        <a style="color:azure" href="https://www.google.com/">About Us</a>
+    </div>
+    <div>
+        <button mat-icon-button (click)="cartIcon()">
+            <mat-icon style="color: azure;" [matBadge]="cartItemCounts" matBadgeColor="warn" [matBadgeHidden]="cartItemCounts==0" > add_shopping_cart</mat-icon>
+        </button>
+    </div>
+</nav> -->
+
+<mat-toolbar style="color: rgb(241, 241, 228); background-color: rgb(34, 32, 32);position:sticky;top: 0%;z-index: 99999;" >
+  
+  &nbsp;&nbsp;
+  <span>Foodie</span>
+  <button mat-button><h2>About Us</h2></button>
+  <span class="example-spacer"></span>
+  <button routerLink="" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon >home</mat-icon></button>
+  <a routerLink="/favourite"><button mat-icon-button class="example-icon favorite-icon"  aria-label="Example icon-button with heart icon">
+    <mat-icon style="color: crimson;" >favorite</mat-icon>
+  </button></a> 
+  <button mat-icon-button (click)="cartIcon()">
+      <mat-icon style="color: azure;" [matBadge]="cartItemCounts" matBadgeColor="warn" [matBadgeHidden]="cartItemCounts==0" > add_shopping_cart</mat-icon>
+  </button>
+  <!-- <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+    <mat-icon>share</mat-icon>
+  </button> -->
+  &nbsp;&nbsp;
+  
+</mat-toolbar>
+
+<div class="album py-5 bg-light" style=>
+  <div class="container" >
+
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" style="width: 100%;justify-content: center;
+    align-items: center;" >
+      
+      <div class="col" style="width: 55%;">
+        <div class="card shadow restaurant-card" >
+          <img class="bd-placeholder-img card-img-top" width="200%" height="225" src={{restaurant.restaurantImages[0]}} name="image" preserveAspectRatio="xMidYMid slice" focusable="false" >
+          
+            
+            <div class="row gx-1 my-row" >
+              <div class="col-lg-9 col-md-6 my-col">
+                <h3 class="card-text r-name" style="font-size: xx-large;margin-top: 2%;padding-left: 6%;margin-bottom: 2%;"><b>{{restaurant.restaurantName}}</b></h3>
+    
+    
+                
+                
+              </div>
+              <div class="col-lg-3 col-md-4 flex-end align-items-end my-col">
+                 <button (click)="addFavourite(restaurant)" [ngClass]="{'green' : toggle, 'red': !toggle}" > <mat-icon >favorite</mat-icon></button>
+              </div>
+            </div>
+    
+            <div class="row gx-1  my-row">
+              <div class="col-12 justify-content-start  my-col" >
+                <ul class="cuisine-list">
+                  <li >{{restaurant.restaurantLocation.street}}</li>
+                </ul>
+                <ul class="cuisine-list">
+                  <li style="text-align: center;">{{restaurant.restaurantLocation.zipcode}}</li>
+                </ul>
+                <ul class="cuisine-list">
+                  <li style="text-align: center;">{{restaurant.restaurantLocation.state}}</li>
+                </ul>
+              </div>
+    
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card mb-3 ; container " style="max-width: 540px;align-self: auto;">
+  <!-- <div>
+    <img src="{{restaurant.restaurantImages[0]}}" class="img-fluid rounded-start">
+  </div> -->
+    <div class="row g-0" *ngFor="let dish of dishes">
+      <div class="col-md-4">
+        <img src="{{dish.dishImages[0]}}" class="img-fluid rounded-start" >
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h2 class="card-title mt-2"  >{{dish.dishName}}</h2>
+          <h5 class="card-text"> Quantity    -  {{dish.dishWeight}} {{dish.unit}}</h5>
+          <h5 class="card-text">Amount    -  {{dish.dishPrice}} </h5>
+          <form >
+            <label for="quantity">Quantity    :     </label>
+            &nbsp;&nbsp;<input type="number" id={{dish.dishId}} name="quantity" value="1" min="1" max="5">
+            &nbsp;&nbsp;<button type="button" class="btn btn-block btn-light global--btn-size" (click)="addToCart(dish.dishId)">
+                ADD TO CART
+              <i class="fa fa-shopping-cart ml-1 icon-custom-color" aria-hidden="true" routerLink="/cart"></i>
+            </button>
+          </form>
+          
+        </div>
+      </div>
+    </div>
+  </div>

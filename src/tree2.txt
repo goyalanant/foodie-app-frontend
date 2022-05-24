@@ -1,0 +1,140 @@
+Folder PATH listing for volume Windows
+Volume serial number is 046A-B100
+C:.
+¦   address.ts
+¦   favicon.ico
+¦   index.html
+¦   main.ts
+¦   polyfills.ts
+¦   styles.css
+¦   test.ts
+¦   tree.txt
+¦   tree2.txt
+¦   
++---app
+¦   ¦   app-routing.module.ts
+¦   ¦   app.component.css
+¦   ¦   app.component.html
+¦   ¦   app.component.spec.ts
+¦   ¦   app.component.ts
+¦   ¦   app.module.ts
+¦   ¦   Cart.ts
+¦   ¦   cartItem.ts
+¦   ¦   Cuisine.ts
+¦   ¦   Dish.ts
+¦   ¦   Location.ts
+¦   ¦   Restaurant.ts
+¦   ¦   user.ts
+¦   ¦   vendor.ts
+¦   ¦   
+¦   +---about-us
+¦   ¦       about-us.component.css
+¦   ¦       about-us.component.html
+¦   ¦       about-us.component.spec.ts
+¦   ¦       about-us.component.ts
+¦   ¦       
+¦   +---add-restaurant
+¦   ¦       add-restaurant.component.css
+¦   ¦       add-restaurant.component.html
+¦   ¦       add-restaurant.component.spec.ts
+¦   ¦       add-restaurant.component.ts
+¦   ¦       
+¦   +---body
+¦   ¦       body.component.css
+¦   ¦       body.component.html
+¦   ¦       body.component.spec.ts
+¦   ¦       body.component.ts
+¦   ¦       
+¦   +---cart
+¦   ¦       cart.component.css
+¦   ¦       cart.component.html
+¦   ¦       cart.component.spec.ts
+¦   ¦       cart.component.ts
+¦   ¦       
+¦   +---favourite
+¦   ¦       favourite.component.css
+¦   ¦       favourite.component.html
+¦   ¦       favourite.component.spec.ts
+¦   ¦       favourite.component.ts
+¦   ¦       
+¦   +---footer
+¦   ¦       footer.component.css
+¦   ¦       footer.component.html
+¦   ¦       footer.component.spec.ts
+¦   ¦       footer.component.ts
+¦   ¦       
+¦   +---header
+¦   ¦       header.component.css
+¦   ¦       header.component.html
+¦   ¦       header.component.spec.ts
+¦   ¦       header.component.ts
+¦   ¦       
+¦   +---home
+¦   ¦       home.component.css
+¦   ¦       home.component.html
+¦   ¦       home.component.spec.ts
+¦   ¦       home.component.ts
+¦   ¦       
+¦   +---login
+¦   ¦       login.component.css
+¦   ¦       login.component.html
+¦   ¦       login.component.spec.ts
+¦   ¦       login.component.ts
+¦   ¦       
+¦   +---navbar
+¦   ¦       navbar.component.css
+¦   ¦       navbar.component.html
+¦   ¦       navbar.component.spec.ts
+¦   ¦       navbar.component.ts
+¦   ¦       
+¦   +---privacy
+¦   ¦       privacy.component.css
+¦   ¦       privacy.component.html
+¦   ¦       privacy.component.spec.ts
+¦   ¦       privacy.component.ts
+¦   ¦       
+¦   +---profile
+¦   ¦       profile.component.css
+¦   ¦       profile.component.html
+¦   ¦       profile.component.spec.ts
+¦   ¦       profile.component.ts
+¦   ¦       
+¦   +---restaurant
+¦   ¦       restaurant.component.css
+¦   ¦       restaurant.component.html
+¦   ¦       restaurant.component.spec.ts
+¦   ¦       restaurant.component.ts
+¦   ¦       
+¦   +---services
+¦   ¦       auth.guard.spec.ts
+¦   ¦       auth.guard.ts
+¦   ¦       cart.service.spec.ts
+¦   ¦       cart.service.ts
+¦   ¦       login.service.spec.ts
+¦   ¦       login.service.ts
+¦   ¦       sharingdata.service.spec.ts
+¦   ¦       sharingdata.service.ts
+¦   ¦       signup.service.spec.ts
+¦   ¦       signup.service.ts
+¦   ¦       vendor-service.service.spec.ts
+¦   ¦       vendor-service.service.ts
+¦   ¦       
+¦   +---signup
+¦           signup.component.css
+¦           signup.component.html
+¦           signup.component.spec.ts
+¦           signup.component.ts
+¦           
++---assets
+¦       .gitkeep
+¦       facebook.jpeg
+¦       image.png
+¦       insta.jpeg
+¦       logo.jpeg
+¦       logo2.jpg
+¦       twit.jpeg
+¦       
++---environments
+        environment.prod.ts
+        environment.ts
+        

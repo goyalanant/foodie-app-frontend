@@ -1,0 +1,19 @@
+.font{
+    font-size: xx-large;
+    font-family:fantasy;
+    margin-left: 6%;
+}
+td {
+   padding-bottom: 1%;
+    padding-left: 82px;
+    padding-right: 40px;
+  }
+  .img{
+      width: 25px;
+  }
+  .img2{
+    width: 35px;
+}
+.gap{
+    padding-left: 10px;
+}

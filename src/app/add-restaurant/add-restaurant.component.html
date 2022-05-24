@@ -1,0 +1,237 @@
+<header>
+    <div class="container-fluid my-container">
+        <div class="row h-25 justify-content-between align-items-center my-row">
+            <div class="col-md-2 offset-1 col-sm-6 my-col">
+                <li><a href="https://www.google.com/">About Us</a></li>
+            </div>
+            <div class="col-lg-5  col-md-8  col-sm-12 my-col">
+                <ul class="nav_links">
+                    <li><button routerLink="">Home</button></li>
+                </ul>
+            </div>
+            <!-- <div class="col-lg-5  col-md-8  col-sm-12 my-col">
+                <ul class="nav_links">
+                    <li><a routerLink="/">order food</a></li>
+                    <li><button>Login</button></li>
+                    <li><button>SignUp</button></li>
+                </ul> 
+            </div> -->
+        </div>
+        <div class="row h-25 justify-content-center align-items-end my-row">
+            
+            <div class="col-lg-8 my-col">
+                <h4>Foozie <sub>For Business</sub></h4>
+            </div>
+         
+        </div>
+
+        <div class="row h-25 justify-content-center align-items-center my-row">
+            
+            <div class="col-lg-6  col-md-8 col-sm-12 my-col">
+                <h6>Boast your brand visibility with us</h6>
+            </div>
+        </div>
+      
+    </div>
+</header>
+
+ <mat-tab-group mat-stretch-tabs class="Longtabs">
+    <mat-tab label="Add Vendor" >
+    
+      <div class="container mt-3">
+   
+  
+        <form action="/action_page.php" >
+          
+          <div class="grid">
+      
+          <div class="address">
+            <h1>Vendor Details</h1> 
+          <div class="mb-3">
+            <label for="name">Name:</label>
+            <input type="text"   class="form-control" id="name" placeholder="Enter name" name="pswd" [(ngModel)]="cred.name" >
+             
+            
+    
+        
+           </div>
+      
+          <div class="mb-3 mt-3">
+            <label for="email">Email:</label>
+            <input type="email"  class="form-control" id="email" placeholder="Enter email" name="email" [(ngModel)]="cred.email" >
+             
+            
+           </div>
+          <!-- <div class="mb-3">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" >
+            
+
+            </div> -->
+      
+          <div class="mb-3">
+            <label for="number">Phone Number:</label>
+            <input type="text"  class="form-control" id="number" placeholder="Enter Phone Number" name="phoneNo"  [(ngModel)]="cred.phoneNo" >
+
+          </div>
+      
+        
+          <div class="mb-3">
+            <label for="address">Street:</label>
+            <input type="text" class="form-control" id="street" placeholder="Enter Street" name="street" [(ngModel)]="cred.street"  >
+          </div>
+          <div class="mb-3">
+            <label for="address">Landmark:</label>
+            <input type="text" class="form-control" id="location" placeholder="Enter Landmark" name="landmark" [(ngModel)]="cred.landmark"  >
+          </div>
+          
+          <div class="mb-3">
+            <label for="State">State:</label>
+            <input type="text" class="form-control" id="state" placeholder="Enter State" name="state" [(ngModel)]="cred.state"  >
+          </div>
+      
+          <div class="mb-3">
+            <label for="City">City:</label>
+            <input type="text" class="form-control" id="city" placeholder="Enter City" name="city" [(ngModel)]="cred.city"  >
+          </div>
+      
+          <div class="mb-3">
+            <label for="Zipcode">zipcode:</label>
+            <input type="text" class="form-control" id="Zipcode" placeholder="Enter PinCode" name="zipcode" [(ngModel)]="cred.zipcode" >
+          </div>
+          <div>
+            <button mat-raised-button color="primary" (click)="registerNow()">Submit</button>
+         </div> 
+          
+          
+        </div> 
+        
+        </div>
+      
+        </form>
+      </div>    
+    </mat-tab>
+    <mat-tab label="Add Restaurant">
+      
+
+        <div class="address">
+          <h1>Restaurant Details</h1>
+          <div class="mb-3">
+            <label for="restaurantName">Restaurant Name:</label>
+            <input type="text" class="form-control" id="restaurantName" placeholder="Enter Restaurant name" name="pswd" [(ngModel)]="credentials.resName" >
+                  
+         
+          </div>
+          <div>            
+            <img [src]="url" height="100"><br>
+            <input type="file" (change)="onselectFile($event)" >
+            <h3
+            >Give the Restaurant Photo</h3>
+          </div>
+          <div class="mb-3">
+            <h2>Add Cuisines</h2>
+            <mat-form-field appearance="fill">
+          <mat-label>Select cuisines</mat-label>
+          <mat-select [formControl]="cuisines" multiple>
+            <mat-select-trigger>
+              {{cuisines.value ? cuisines.value[0] : ''}}
+              <span *ngIf="cuisines.value?.length > 1" class="example-additional-selection">
+                (+{{cuisines.value.length - 1}} {{cuisines.value?.length === 2 ? 'other' : 'others'}})
+              </span>
+            </mat-select-trigger>
+            <mat-option *ngFor="let cuisines of cuisineList" [value]="cuisines">{{cuisines}}</mat-option>
+          </mat-select>
+            </mat-form-field>
+        </div>
+        <div class="mb-3">
+          <label for="address">Street:</label>
+          <input type="text" class="form-control" id="street" placeholder="Enter Street" name="pswd" [(ngModel)]="credentials.street" >
+        </div>
+        
+        <div class="mb-3">
+            <label for="address">Landmark:</label>
+            <input type="text" class="form-control" id="location" placeholder="Enter Landmark" name="landmark" [(ngModel)]="credentials.landmark"  >
+          </div>
+    
+        <div class="mb-3">
+          <label for="City">City:</label>
+          <input type="text" class="form-control" id="city" placeholder="Enter City" name="city" [(ngModel)]="credentials.city">
+        </div>
+    
+        <div class="mb-3">
+          <label for="Zipcode">PinCode:</label>
+          <input type="text" class="form-control" id="zipcode" placeholder="Enter PinCode" name="zipcode" [(ngModel)]="credentials.zipcode" >
+        </div>
+      
+        <div class="mb-3">
+            <label for="State">State:</label>
+            <input type="text" class="form-control" id="state" placeholder="Enter State" name="state" [(ngModel)]="credentials.state">
+          </div>
+     
+      <div>
+        <button mat-raised-button color="primary" (click)="saveNow()">Submit</button>
+     </div>        
+    </div>        
+    </mat-tab>
+
+    <mat-tab label="Add Cuisine"> 
+      <div class="address">
+        <!-- <h1>Add Cuisine</h1>
+        <mat-form-field appearance="fill">
+          <mat-label>Cuisine</mat-label>
+          <mat-select [formControl]="cuisines" multiple>
+            <mat-select-trigger>
+              {{cuisines.value ? cuisines.value[0] : ''}}
+              <span *ngIf="cuisines.value?.length > 1" class="example-additional-selection">
+                (+{{cuisines.value.length - 1}} {{cuisines.value?.length === 2 ? 'other' : 'others'}})
+              </span>
+            </mat-select-trigger>
+            <mat-option *ngFor="let cuisines of cuisineList" [value]="cuisines">{{cuisines}}</mat-option>
+          </mat-select>
+        </mat-form-field> -->
+        &nbsp; &nbsp; &nbsp;
+      </div>
+      <div class="container mt-3">   
+        <form action="/action_page.php">    
+          <div class="grid">    
+            <div class="address">    
+      <h1>Add Dish</h1>
+        <div class="mb-3">
+          <label for="pwd">Dish Name:</label>
+          <input type="text" class="form-control" id="pwd" placeholder="Enter Dish name" name="pswd" >
+        
+        </div>
+    
+        <div class="mb-3">
+            <label for="pwd">Dish Price:</label>
+            <input type="text" class="form-control" id="pwd" placeholder="Enter Dish Price" name="pswd"  >
+         </div>
+    
+          <div class="mb-3">
+            <label for="pwd">Dish Weight:</label>
+            <input type="text" class="form-control" id="pwd" placeholder="Enter Dish Weight" name="pswd"  >
+          </div>
+          <div>            
+            <img [src]="url" height="100"><br>
+            <input type="file" (change)="onselectFile($event)"  >
+            <h3
+            >Give the Dish Photo</h3>
+          </div>
+    
+          <div>
+             <button mat-raised-button color="primary" (click)="saveDish()" >Submit</button>
+          </div>
+    
+        </div>
+      </div>
+    
+        </form>
+    </div>    
+     
+         
+      
+      
+    
+    </mat-tab>
+  </mat-tab-group>  --> 
+
